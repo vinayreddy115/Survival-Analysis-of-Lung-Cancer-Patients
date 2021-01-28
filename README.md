@@ -56,9 +56,8 @@ loglogistic <- survreg(Surv(Survival, Status) ~ as.factor(Treatment)+as.factor(C
 #### insights and Recommendations to Medical Audience: 
 
 #### From Cox proportional hazard mode
-•	As the coefficient 0.28 is positive, it implies the patients with Test treatment are more likely for the occurrence of event i.e. hazard rate. Also, the 1.33 indicates that, patients who undergo test treatment have a 33% higher chances of death compared to standard treatment.
-
-•	Age has negative effect on hazard rate, i.e. one unit increase in Age decreases the hazard rate by 0.8%, though p-value is not significant
+*	As the coefficient 0.28 is positive, it implies the patients with Test treatment are more likely for the occurrence of event i.e. hazard rate. Also, the 1.33 indicates that, patients who undergo test treatment have a 33% higher chances of death compared to standard treatment.
+* Age has negative effect on hazard rate, i.e. one unit increase in Age decreases the hazard rate by 0.8%, though p-value is not significant
 •	Also, the diagnosis time has a negative effect on hazard rate, one unit increase of diagnosis time decreases the hazard rate by 0.93% which is negligible
 •	If patients have prior Chemotheraoy, there is high chances of death, i.e. it increases by 7.5%
 •	Patients with increasing karnofsky_score is likely to live more and with hazard rate decrease by 4%.  Healthy people live longer with cancer.
