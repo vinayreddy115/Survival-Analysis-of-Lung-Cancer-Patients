@@ -5,13 +5,12 @@ Analyzed the Veteran's Administration Lung Cancer Trial, where 137 patients with
 ## objective : 
 To do survival analysis on Lung Cancer Trial data and present report for a medical audience (doctors). 
 
-https://user-images.githubusercontent.com/54513205/106189955-f3d83480-6176-11eb-8a88-d33b1f1d4020.png
 
 ## Code and Resources Used
 
-### R packages :
+#### R packages :
 survminer,survival,ggsurvplot, stargazer
-### Data Source : 
+#### Data Source : 
 Veteran's Administration Lung Cancer Trial
 
 #### a. What is the probability that the patient will survive for 1 year (365 days) and 6 months (183 days) on the standard treatment vs the test treatment?
@@ -30,16 +29,16 @@ Mean number of days	                  100 days	52 days
 •	Mean number of days for standard: around 100 days
 •	Mean number of days for test: 52 days
 
-![image](https://user-images.githubusercontent.com/54513205/106191458-e58b1800-6178-11eb-8a3d-ca57aed5b9ed.png)
+![Survival by treatment](https://github.com/vinayreddy115/Survival-Analysis-of-Lung-Cancer-Patients/blob/main/Treatment_Analysis.png)
 
-### Model Building:
+## Model Building:
 
 Parametric and semi-parametric models - For all the independent variables
 
 
-### Exponential, Weibull, and log-logistic parametric model coefficients
+#### Exponential, Weibull, and log-logistic parametric model coefficients
 
-#### 2. Create three semi-parametric and parametric models to estimate the marginal effects of relevant predictors on survival outcomes. Interpret the coefficients of these models to explain the precise effects of age and months of diagnosis on survival probabilities of patients with standard and test treatments.
+#### Create three semi-parametric and parametric models to estimate the marginal effects of relevant predictors on survival outcomes. Interpret the coefficients of these models to explain the precise effects of age and months of diagnosis on survival probabilities of patients with standard and test treatments.
 #### Cox proportional hazard model - For all the independent variables
 
 Cox <- coxph(Surv(Survival, Status) ~  as.factor(Treatment)+ as.factor(Cell_type)+ Age + Diagnosis_Time + Karnofsky_score + as.factor(Prior_chemotherapy), method="breslow")
@@ -53,7 +52,7 @@ weibull <- survreg(Surv(Survival, Status) ~ as.factor(Treatment)+as.factor(Cell_
 loglogistic <- survreg(Surv(Survival, Status) ~ as.factor(Treatment)+as.factor(Cell_type)+ Age + Diagnosis_Time+Karnofsky_score +as.factor(Prior_chemotherapy), dist="loglogistic")
 
 
-#### insights and Recommendations to Medical Audience: 
+## insights and Recommendations to Medical Audience: 
 
 #### From Cox proportional hazard mode
 
