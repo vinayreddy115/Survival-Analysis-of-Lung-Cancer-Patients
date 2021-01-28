@@ -56,19 +56,20 @@ loglogistic <- survreg(Surv(Survival, Status) ~ as.factor(Treatment)+as.factor(C
 #### insights and Recommendations to Medical Audience: 
 
 #### From Cox proportional hazard mode
+
 *	As the coefficient 0.28 is positive, it implies the patients with Test treatment are more likely for the occurrence of event i.e. hazard rate. Also, the 1.33 indicates that, patients who undergo test treatment have a 33% higher chances of death compared to standard treatment.
 * Age has negative effect on hazard rate, i.e. one unit increase in Age decreases the hazard rate by 0.8%, though p-value is not significant
-•	Also, the diagnosis time has a negative effect on hazard rate, one unit increase of diagnosis time decreases the hazard rate by 0.93% which is negligible
-•	If patients have prior Chemotheraoy, there is high chances of death, i.e. it increases by 7.5%
-•	Patients with increasing karnofsky_score is likely to live more and with hazard rate decrease by 4%.  Healthy people live longer with cancer.
-•	Cell types 2,3 and 4 have more impact on the hazard rate compared to type 1, having them inreases the possibility of death.
+* Also, the diagnosis time has a negative effect on hazard rate, one unit increase of diagnosis time decreases the hazard rate by 0.93% which is negligible
+* If patients have prior Chemotheraoy, there is high chances of death, i.e. it increases by 7.5%
+* Patients with increasing karnofsky_score is likely to live more and with hazard rate decrease by 4%.  Healthy people live longer with cancer.
+* Cell types 2,3 and 4 have more impact on the hazard rate compared to type 1, having them inreases the possibility of death.
 
 #### from Parametric and semi-parametric models
-•	Treatment type: patients with treatment 2 are more likely prone to death compared to that of treatment 1. Patients with treatment2 , increases the possibility of event occurring(Hazard rate)
-•	For exponential, Weibull, loglogistic models, the treatment type 2 has negative effect, which implies the survival rate of patients is less compared to that of treatment type 1
-•	Cell type 2,3,4 has positive effect on the hazard rate, which indicated the people cell type1 has the higher chance of living.
-•	Prior Chemotherapy- If a patient is treated early by chemotherapy, time to death is decreased by a factor of 0.05, (Exponential model),0.04 (Weibull model) 0.1 (Loglogistic model). 
-•	Age has negative effect on hazard rate, 
-•	Also, the diagnosis time has a negative effect on hazard rate, 
+* Treatment type: patients with treatment 2 are more likely prone to death compared to that of treatment 1. Patients with treatment2 , increases the possibility of event occurring(Hazard rate)
+* For exponential, Weibull, loglogistic models, the treatment type 2 has negative effect, which implies the survival rate of patients is less compared to that of treatment type 1
+* Cell type 2,3,4 has positive effect on the hazard rate, which indicated the people cell type1 has the higher chance of living.
+* Prior Chemotherapy- If a patient is treated early by chemotherapy, time to death is decreased by a factor of 0.05, (Exponential model),0.04 (Weibull model) 0.1 (Loglogistic model). 
+* Age has negative effect on hazard rate, 
+* Also, the diagnosis time has a negative effect on hazard rate, 
 
 
